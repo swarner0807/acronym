@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package javaTest;
 import java.util.HashMap;
 import java.util.Map;
@@ -12,16 +7,14 @@ import java.util.Scanner;
  *
  * @author stevenwarner
  */
-public class main {
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-    	
-    	Map<String, String> acronData = new HashMap();
+public class main {
+	
+	static final Map<String, String> acronData = new HashMap<String, String>(); 
+	static {
         acronData.put("wtf", "what the fuck");
         acronData.put("lol", "laugh out loud");
+        acronData.put("dw", "don't worry");
         acronData.put("hf", "have fun");
         acronData.put("gg", "good game");
         acronData.put("brb", "be right back");
@@ -29,8 +22,9 @@ public class main {
         acronData.put("wp", "well played");
         acronData.put("gl", "good luck");
         acronData.put("imo", "in my opinion");
-        String phrase = "test";
-    	
+    	}
+	
+    public static void main(String[] args) {
          Scanner userInput = new Scanner(System.in);
          System.out.print("Enter a phrase: ");
          while (userInput.hasNext()) {
@@ -40,9 +34,8 @@ public class main {
         	 } else {
         		 System.out.print(temp + " ");
         	 }
-    
-         }
-              
+         }        
     }
+    
     
 }
